@@ -1,0 +1,32 @@
+{% load static %}
+
+<head>
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/components/header.css' %}">
+</head>
+
+<header>
+    <!-- assistants -->
+    <nav>
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'shop_all' %}">Shop All</a></li>
+            <li><a href="{% url 'ingredients' %}">Ingredients</a></li>
+        </ul>
+    </nav>
+
+    <!-- logo -->
+    <div class="logo">
+        <a href="{% url 'home' %}">
+            <img src="{% static 'vectors/logo/vitaluxe_black_logotype.svg' %}" alt="Vitaluxe Logo">
+        </a>
+    </div>
+
+    <!-- cart-icon -->
+    <div class="cart-icon">
+
+        <img src="{% static 'vectors/icons/cart-icon.svg' %}">
+
+    </div>
+
+</header>

@@ -1,0 +1,57 @@
+/* сбросить все системные стили CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+a {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #000000;
+}
+
+.shipping_policy {
+    padding-top: 20px;
+    padding-bottom: 100px;
+    padding-left: 300px;
+    padding-right: 300px;
+}
+
+.shipping_policy .title h1 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #000000;
+}
+
+.shipping_policy h1 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.shipping_policy p {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 100;
+    font-size: 16px;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.shipping_policy b {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

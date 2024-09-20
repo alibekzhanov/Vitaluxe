@@ -1,0 +1,86 @@
+/* сбросить все системные стили CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* Основные стили для футера */
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Три колонки одинаковой ширины */
+    padding: 50px 90px;
+    background-color: #010101;
+    color: #ffffff;
+}
+
+/* Первая колонка — логотип */
+.footer .logo {
+    display: flex;
+    align-items: flex-start; /* Логотип сверху */
+    justify-content: flex-start; /* Логотип сбоку слева */
+}
+
+.footer .logo img {
+    width: 130px;
+    margin-top: 0; /* Верхний отступ 0 для прижатия к верху */
+    margin-left: 0; /* Левый отступ 0 для прижатия к левому краю */
+}
+
+/* Вторая колонка — навигационное меню */
+.footer nav {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Вертикальное выравнивание меню */
+}
+
+.footer nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column; /* Вертикальное расположение ссылок */
+    gap: 20px;
+    padding: 0;
+}
+
+.footer nav ul li {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.footer nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+/* Анимация при наведении на ссылки, обводка по длине ссылки */
+.footer nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: width 0.4s ease-in-out, background-color 0.4s ease-in-out;
+}
+
+.footer nav ul li a:hover::after {
+    width: 100%; /* Ширина теперь соответствует длине ссылки */
+    background-color: #ffffff;
+}
+
+/* Стили для текста © 2024 */
+.footer nav .copyright {
+}
+
+/* Третья колонка — пустая */
+.footer .empty {
+    /* Можете добавить стили, если понадобится в будущем */
+}

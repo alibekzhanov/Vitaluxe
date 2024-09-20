@@ -1,0 +1,125 @@
+{% extends 'main/base.html' %}
+
+{% load static %}
+
+{% block content %}
+<!-- Подключение CSS для ingredients -->
+<link rel="stylesheet" type="text/css" href="{% static 'css/ingredients.css' %}">
+
+<div class="guide_slider">
+    <div class="ingredients_grid">
+        <div class="ingredient_item">
+            <img class="image" src="{% static 'images/peach.jpg' %}" alt="Peach Flavour">
+            <div class="overlay">
+                <p>Peach</p>
+            </div>
+        </div>
+        
+        <div class="ingredient_item">
+            <img class="image" src="{% static 'images/lime.jpg' %}" alt="Lime Flavour">
+            <div class="overlay">
+                <p>Lime</p>
+            </div>
+        </div>
+
+        <div class="ingredient_item">
+            <img class="image" src="{% static 'images/watermelon.jpg' %}" alt="Watermelon Flavour">
+            <div class="overlay">
+                <p>Watermelon</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+    <blockquote>Here’s the truth. Water simply isn’t enough.</blockquote>
+
+    <div class="hypertext">
+        <h1>Caffeine</h1>
+        <p>
+            Caffeine, a natural stimulant, enhances daily life by promoting 
+            alertness and reduced fatigue. Through adenosine receptor inhibition, 
+            it stimulates higher levels of brain activity. 
+            Caffeine also promotes the release of adrenaline, 
+            which enhances metabolism and physical performance. 
+            Such benefits are frequently used by athletes to improve attention, 
+            decrease perceived effort during training, and boost endurance.
+        </p>
+    </div>
+
+    <div class="hypertext">
+        <h1>Sodium</h1>
+        <p>
+            You don’t need less salt. Chances are, you need more. 
+            We included Sodium chloride in optimal doses to help restore 
+            a sense of vitality in your day-to-day and help you replenish what 
+            you lose through daily exertion. Sodium is a primary electrolyte 
+            as it is found in its highest concentrations outside of our cells. 
+            It’s concentration dictates how much water is pushed into 
+            cells from our blood and other extracellular liquids. 
+            In short, having adequate sodium in your system ensures 
+            the water you drink *actually* hydrates you.
+        </p>
+    </div>
+
+    <div class="hypertext">
+        <h1>Chloride</h1>
+        <p>
+            Chloride is used by the body to ensure the correct level of fluid balance. 
+            If you don’t have enough you can become dehydrated. It’s as simple as that.
+        </p>
+    </div>
+
+    <div class="hypertext">
+        <h1>Potassium</h1>
+        <p>
+            Both our cans and sachets have included ideal doses of potassium 
+            to support increased performance. We included potassium 
+            for its primary role in ensuring your cells are adequately 
+            hydrated and supporting nerve function in the body.
+        </p>
+    </div>
+
+    <div class="hypertext">
+        <h1>Magnesium</h1>
+        <p>
+            The magnesium in our formula plays a key role in preventing general 
+            tiredness, fatigue and overall combating that feeling of being 
+            ‘flat’. Magnesium also helps to support a healthy nervous system 
+            and metabolism while a deficiency in magnesium is 
+            often associated with sleepless nights and general fatigue.
+        </p>
+    </div>
+
+    <div class="hypertext">
+        <h1>Phosphate</h1>
+        <p>
+            Phosphate is essential for supporting healthy energy levels 
+            and regulating muscle function. If you don’t have 
+            the right levels of phosphate in your system, you’re cutting yourself down. 
+        </p>
+    </div>
+
+    <div class="hypertext">
+        <h1>Calcium</h1>
+        <p>
+            We included calcium for its vital role in fluid distribution, 
+            with it being especially important to ensure that your 
+            skeletal system is functioning correctly. In short, lower 
+            levels of calcium can hinder normal bone regeneration and healing
+            - causing brittleness and increasing the likelihood of injury from exercise.
+        </p>
+    </div>
+
+    <div class="hypertext">
+        <h1>Zinc</h1>
+        <p>
+            Zinc has been known to contribute to normal carbohydrate metabolism, 
+            normal cognitive functions and normal testosterone production. 
+            This makes it one of the key components of our formula 
+            for aiding recovery and supporting greater performance.
+        </p>
+    </div>
+</div>
+
+{% endblock %}

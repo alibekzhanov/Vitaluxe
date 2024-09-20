@@ -1,0 +1,99 @@
+/* сбросить все системные стили CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* Общий стиль для header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background-color: #ffffff; /* Светло-серый фон */
+    position: fixed; /* Закрепляем header */
+    top: 0; /* Закрепляем его в верхней части */
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Устанавливаем высокий z-index, чтобы он перекрывал другие элементы */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Добавляем тень для визуального эффекта */
+}
+
+/* Добавляем отступ для основного контента под заголовок */
+body {
+    padding-top: 100px; /* Отступ сверху для предотвращения перекрытия контента header-ом */
+}
+
+/* Стили для навигационного меню (assistants) */
+header nav {
+    flex: 1;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Расстояние между пунктами меню */
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+header nav ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background-color: rgba(51, 51, 51, 0.8);
+    transition: width 0.4s ease-in-out, background-color 0.4s ease-in-out;
+}
+
+header nav ul li a:hover::after {
+    width: 100%;
+    background-color: #333;
+}
+
+/* logo */
+header .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+header .logo img {
+    width: 130px;
+}
+
+/* Стили для иконки корзины (cart-icon) */
+header .cart-icon {
+    position: relative;
+    transition: transform 0.3s ease-in-out; /* Плавный переход */
+}
+
+header .cart-icon img {
+    width: 50px;
+    transition: transform 0.3s ease-in-out; /* Плавный переход для увеличения */
+}
+
+/* При наведении увеличиваем иконку */
+header .cart-icon:hover img {
+    transform: scale(1.1); /* Увеличиваем размер на 10% */
+}

@@ -1,0 +1,29 @@
+{% load static %}
+
+<head>
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/components/footer/footer.css' %}">
+</head>
+
+<body>
+    <div class="footer">
+        <!-- logo -->
+        <div class="logo">
+            <a href="{% url 'home' %}">
+                <img src="{% static 'vectors/logo/vitaluxe_white_logotype.svg' %}" alt="Vitaluxe Logo">
+            </a>
+        </div>
+
+        <!-- assistants -->
+        <nav>
+            <ul>
+                <li><a href="{% url 'shipping_policy' %}">Shipping Policy</a></li>
+                <li><a href="{% url 'terms_and_conditions' %}">Terms & Conditions</a></li>
+                <li><a href="{% url 'website_terms_and_conditions' %}">Website Terms & Conditions</a></li>
+                <li><a href="{% url 'privacy_policy' %}">Privacy Policy</a></li>
+                <li><a href="{% url 'acceptable_use_policy' %}">Acceptable Use Policy</a></li>
+            </ul>
+            <!-- <p class="copyright">© 2024, <a href="{% url 'home' %}">Vitaluxe</a></p> -->
+        </nav>
+    </div>
+</body>

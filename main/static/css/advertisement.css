@@ -1,0 +1,130 @@
+/* сбросить все системные стили CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+body .advertisement {
+    background-color: #dbdbdb;
+    display: flex;
+    justify-content: space-between; /* Одна колонка слева, другая справа */
+    align-items: center;
+    margin: 0 auto; /* Центровка контейнера */
+    padding-left: 90px;
+    padding-right: 90px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+/* banner-content: */
+body .advertisement .banner-content .title {
+    font-family: "Merienda", cursive;
+    font-optical-sizing: auto;
+    font-size: 36px;
+    font-style: normal;
+    color:#000000;
+}
+
+body .advertisement .banner-content .text {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+body .advertisement .banner-content .shop_now_button {
+    padding-top: 20px;
+}
+
+body .advertisement .banner-content .shop_now_button .btn {
+    background-color: #000000;
+    color: #fff;
+    padding: 15px 50px;
+    text-decoration: none;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+}
+
+
+/* banner: */
+body .advertisement .banner {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+body .advertisement .banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body .advertisement .banner img, body .advertisement .banner video {
+    width: 800px;
+}
+
+
+/* .scroll-section */
+/* Основной стиль секции */
+body .scroll-section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+    background-color: #f5f5f5;
+    height: 100px; /* Высота секции */
+    white-space: nowrap;
+}
+
+/* Прокручиваемый контент */
+body .scroll-section .scroll-content {
+    display: flex;
+    gap: 40px;
+    animation: scroll-horizontal 20s linear infinite;
+}
+
+/* Контейнеры внутри */
+body .scroll-section .container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+body .scroll-section .container .icon {
+    width: 40px;
+    height: auto;
+}
+
+body .scroll-section .container p {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 16px;
+}
+
+/* Анимация горизонтальной прокрутки */
+@keyframes scroll-horizontal {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Остановка анимации при наведении */
+body .scroll-section:hover .scroll-content {
+    animation-play-state: paused;
+}
+

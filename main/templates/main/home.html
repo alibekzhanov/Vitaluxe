@@ -1,0 +1,86 @@
+{% extends 'main/base.html' %}
+
+{% load static %}
+
+{% block content %}
+<!-- advertisement.css -->
+<link rel="stylesheet" type="text/css" href="{% static 'css/advertisement.css' %}">
+
+<div class="advertisement">
+    <div class="banner-content">
+        <div class="title">
+            <h1>{{ advertisement.title }}</h1>
+        </div>
+    
+        <div class="text">
+            <p>{{ advertisement.text }}</p>
+        </div>
+    
+        <div class="shop_now_button">
+            <a href="{% url 'shop_all' %}" class="btn">Shop now</a>
+        </div>
+    </div>
+
+    <div class="banner">
+        {% if advertisement.banner %}
+            {% if is_video %}
+                <video controls>
+                    <source src="{{ advertisement.banner.url }}" type="video/mp4">
+                </video>
+            {% else %}
+                <img src="{{ advertisement.banner.url }}" alt="Banner">
+            {% endif %}
+        {% else %}
+            <p>Banner is missing</p>
+        {% endif %}
+    </div>
+</div>
+
+<div class="scroll-section">
+    <div class="scroll-content">
+        <div class="container">
+            <img class="icon" src="{% static 'vectors/icons/cafeinne-icon.svg' %}">
+            <p>80mg of caffeine per can</p>
+        </div>
+        <div class="container">
+            <img class="icon" src="{% static 'vectors/icons/electrolytes-icon.svg' %}">
+            <p>6 electrolytes</p>
+        </div>
+        <div class="container">
+            <img class="icon" src="{% static 'vectors/icons/natural-flavour-icon.svg' %}">
+            <p>Instantly hydrating</p>
+        </div>
+        <div class="container">
+            <img class="icon" src="{% static 'vectors/icons/sugar-free-icon.svg' %}">
+            <p>No added sugar</p>
+        </div>
+        <div class="container">
+            <img class="icon" src="{% static 'vectors/icons/zero-calories-icon.svg' %}">
+            <p>Zero calories</p>
+        </div>
+
+        <!-- Дублирование для бесконечной прокрутки -->
+        <div class="container">
+            <img class="icon" src="{% static 'vectors/icons/cafeinne-icon.svg' %}">
+            <p>80mg of caffeine per can</p>
+        </div>
+        <div class="container">
+            <img class="icon" src="{% static 'vectors/icons/electrolytes-icon.svg' %}">
+            <p>6 electrolytes</p>
+        </div>
+        <div class="container">
+            <img class="icon" src="{% static 'vectors/icons/natural-flavour-icon.svg' %}">
+            <p>Instantly hydrating</p>
+        </div>
+        <div class="container">
+            <img class="icon" src="{% static 'vectors/icons/sugar-free-icon.svg' %}">
+            <p>No added sugar</p>
+        </div>
+        <div class="container">
+            <img class="icon" src="{% static 'vectors/icons/zero-calories-icon.svg' %}">
+            <p>Zero calories</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
