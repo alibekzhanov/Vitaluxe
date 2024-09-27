@@ -12,4 +12,7 @@ urlpatterns = [
     path('pages/website_terms_and_conditions/', views.website_terms_and_conditions, name='website_terms_and_conditions'),
     path('pages/privacy_policy/', views.privacy_policy, name='privacy_policy'),
     path('pages/acceptable_use_policy/', views.acceptable_use_policy, name='acceptable_use_policy'),
+
+    # products
+    path('products/', views.products, name='products'),
 ]

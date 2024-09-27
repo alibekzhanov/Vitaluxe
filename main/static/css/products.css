@@ -1,0 +1,42 @@
+/* сбросить все системные стили CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+.product_grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.product_card {
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 20px;
+    transition: transform 0.3s;
+}
+
+.product_card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.shop_button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.shop_button:hover {
+    background-color: #444;
+    transform: scale(1.05);
+}

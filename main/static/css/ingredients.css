@@ -50,7 +50,7 @@
 }
 
 .guide_slider .ingredients_grid .ingredient_item:hover img {
-    filter: grayscale(10%) brightness(40%);
+    filter: grayscale(100%) brightness(70%);
 }
 
 .guide_slider .ingredients_grid .ingredient_item:hover .overlay {

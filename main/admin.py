@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Advertisement
+from .models import Advertisement, Product
 
 
 class AdvertisementAdmin(admin.ModelAdmin):
@@ -7,5 +7,11 @@ class AdvertisementAdmin(admin.ModelAdmin):
     search_fields = ('title',)
 
 
-admin.site.register(Advertisement, AdvertisementAdmin)
+class ProductAdmin(admin.ModelAdmin):
+    list_display = ('name', 'price', 'ratings')
+    search_fields = ('name',)
+    list_filter = ('price',)
 
+
+admin.site.register(Advertisement, AdvertisementAdmin)
+admin.site.register(Product, ProductAdmin)

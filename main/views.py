@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Advertisement
+from .models import Product
 
 
 def home(request):
@@ -20,7 +21,13 @@ def base(request):
 
 
 def shop_all(request):
-    return render(request, 'main/shop_all.html')
+    products = Product.objects.all()
+    return render(request, 'main/shop_all.html', {'products': products})
+
+
+def products(request):
+    products = Product.objects.all() # Получаем все продукты из базы данных
+    return render(request, 'main/products.html', {'products': products}) # Передаем их в шаблон
 
 
 def ingredients(request):
@@ -46,3 +53,4 @@ def privacy_policy(request):
 
 def acceptable_use_policy(request):
     return render(request, 'main/components/footer/acceptable_use_policy.html')
+
