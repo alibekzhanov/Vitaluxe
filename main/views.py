@@ -8,12 +8,12 @@ def home(request):
 
     is_video = advertisement.banner.url.endswith('.mp4') if advertisement.banner else False
     
+    products = Product.objects.all()
     return render(request, 'main/home.html', {
         'advertisement': advertisement,
-        'is_video': is_video
+        'is_video': is_video,
+        'products': products
     })
-
-    return render(request, 'main/home.html')
 
 
 def base(request):
